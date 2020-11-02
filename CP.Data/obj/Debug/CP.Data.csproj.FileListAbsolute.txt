@@ -1,0 +1,16 @@
+C:\Users\cpatachia\Desktop\CP\CP.Data\bin\Debug\CP.Data.dll.config
+C:\Users\cpatachia\Desktop\CP\CP.Data\bin\Debug\CP.Data.dll
+C:\Users\cpatachia\Desktop\CP\CP.Data\bin\Debug\CP.Data.pdb
+C:\Users\cpatachia\Desktop\CP\CP.Data\bin\Debug\EntityFramework.dll
+C:\Users\cpatachia\Desktop\CP\CP.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cpatachia\Desktop\CP\CP.Data\bin\Debug\EntityFramework.xml
+C:\Users\cpatachia\Desktop\CP\CP.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.csprojAssemblyReference.cache
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.csproj.CoreCompileInputs.cache
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.csproj.CopyComplete
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.dll
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.pdb
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.Init.resources
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.csproj.GenerateResource.cache
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.SitesUpdate.resources
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.DrugUnitUpdate.resources

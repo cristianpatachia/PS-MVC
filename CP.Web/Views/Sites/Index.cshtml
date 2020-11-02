@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CP.Data.Models.Site>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Site List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteCountryCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteCountryCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.SiteId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.SiteId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.SiteId })
+        </td>
+    </tr>
+}
+
+</table>

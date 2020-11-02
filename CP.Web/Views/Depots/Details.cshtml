@@ -1,0 +1,42 @@
+﻿@model CP.Data.Models.Depot
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details for @Model.DepotName</h2>
+
+<div>
+    <h4>Depot</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DepotName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepotName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepotCountryCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepotCountryCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepotId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepotId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DepotId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
