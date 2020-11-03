@@ -3,6 +3,7 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using CP.Data.Services;
 using CP.Data.Services.DepotData;
+using CP.Data.Services.DrugUnitData;
 using CP.Data.Services.SiteData;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace CP.Web
             builder.RegisterApiControllers(typeof(MvcApplication).Assembly);
             builder.RegisterType<DepotData>().As<IDepotData>().InstancePerRequest();
             builder.RegisterType<SiteData>().As<ISiteData>().InstancePerRequest();
+            builder.RegisterType<DrugUnitData>().As<IDrugUnitData>().InstancePerRequest();
             builder.RegisterType<AppDbContext>().InstancePerRequest();
             
             var container = builder.Build();

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CP.Data.Models.DrugUnit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Drug Units List</h2>
+
+<p>
+    @Html.ActionLink("Group by type", "Group")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DrugUnitId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DrugUnitName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DrugUnitDepot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PickNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DestinationSite)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DrugUnitId) 
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DrugUnitName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DrugUnitDepot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PickNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DestinationSite)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.DrugUnitId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.DrugUnitId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.DrugUnitId })
+        </td>
+    </tr>
+}
+
+</table>

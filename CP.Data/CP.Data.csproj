@@ -63,6 +63,22 @@
     <Compile Include="Migrations\202011021247031_DrugUnitUpdate.designer.cs">
       <DependentUpon>202011021247031_DrugUnitUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011031015265_DrugUnitUpdate2.cs" />
+    <Compile Include="Migrations\202011031015265_DrugUnitUpdate2.designer.cs">
+      <DependentUpon>202011031015265_DrugUnitUpdate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011031101353_PickNumberNullable.cs" />
+    <Compile Include="Migrations\202011031101353_PickNumberNullable.designer.cs">
+      <DependentUpon>202011031101353_PickNumberNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011031151141_RmDrugListFromSiteAndDepot.cs" />
+    <Compile Include="Migrations\202011031151141_RmDrugListFromSiteAndDepot.designer.cs">
+      <DependentUpon>202011031151141_RmDrugListFromSiteAndDepot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011031320082_DrugUnitDepotAndSiteToString.cs" />
+    <Compile Include="Migrations\202011031320082_DrugUnitDepotAndSiteToString.designer.cs">
+      <DependentUpon>202011031320082_DrugUnitDepotAndSiteToString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Depot.cs" />
@@ -73,6 +89,8 @@
     <Compile Include="Services\AppDbContext.cs" />
     <Compile Include="Services\DepotData\DepotData.cs" />
     <Compile Include="Services\DepotData\IDepotData.cs" />
+    <Compile Include="Services\DrugUnitData\DrugUnitData.cs" />
+    <Compile Include="Services\DrugUnitData\IDrugUnitData.cs" />
     <Compile Include="Services\SiteData\SiteData.cs" />
     <Compile Include="Services\SiteData\ISiteData.cs" />
   </ItemGroup>
@@ -89,6 +107,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011021247031_DrugUnitUpdate.resx">
       <DependentUpon>202011021247031_DrugUnitUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011031015265_DrugUnitUpdate2.resx">
+      <DependentUpon>202011031015265_DrugUnitUpdate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011031101353_PickNumberNullable.resx">
+      <DependentUpon>202011031101353_PickNumberNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011031151141_RmDrugListFromSiteAndDepot.resx">
+      <DependentUpon>202011031151141_RmDrugListFromSiteAndDepot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011031320082_DrugUnitDepotAndSiteToString.resx">
+      <DependentUpon>202011031320082_DrugUnitDepotAndSiteToString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

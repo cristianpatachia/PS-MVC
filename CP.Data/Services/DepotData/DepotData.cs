@@ -56,5 +56,7 @@ namespace CP.Data.Services.DepotData
             db.Depots.Remove(depot);
             db.SaveChanges();
         }
+
+        
     }
 }

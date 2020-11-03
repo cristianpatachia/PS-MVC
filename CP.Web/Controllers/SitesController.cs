@@ -39,6 +39,7 @@ namespace CP.Web.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Create(Site site)
         {
@@ -96,6 +97,38 @@ namespace CP.Web.Controllers
         {
             db.DeleteSite(id);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Group()
+        {
+            var model = db.SiteDetails();
+            return View(model);
+        }
+
+        // Request Drugs for Site
+        [HttpGet]
+        public ActionResult RequestDrugs(int id)
+        {
+            var model = db.GetSite(id);
+            if (model == null)
+            {
+                return HttpNotFound();
+            }
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult RequestDrugs(Site site)
+        {
+            if (String.IsNullOrEmpty(site.SiteName))
+            {
+                ModelState.AddModelError(nameof(site.SiteName), "This name is required.");
+            }
+            if (ModelState.IsValid)
+            {
+                db.UpdateSite(site);
+                return RedirectToAction("Details", new { id = site.SiteId });
+            }
+            return View(site);
         }
     }
 }

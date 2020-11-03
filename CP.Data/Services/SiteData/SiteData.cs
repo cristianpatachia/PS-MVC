@@ -56,5 +56,34 @@ namespace CP.Data.Services.SiteData
             db.Sites.Remove(site);
             db.SaveChanges();
         }
+
+        public IEnumerable<DrugUnit> GetRequestedDrugUnits(string siteId, string drugCode, int quantity)
+        {
+            var requestedDrugs = db.DrugUnits
+                                        .Where(x => x.AssignedTypeName == drugCode)
+                                        .Select(x => new DrugUnit
+                                        {
+                                            AssignedTypeName = x.AssignedTypeName,
+                                            DrugUnitId = x.DrugUnitId,
+                                            PickNumber = x.PickNumber
+                                        }).Take(quantity)
+                                        .AsEnumerable();
+
+            return requestedDrugs;
+        }
+
+        public void UpdateSiteInventory(int destinationSiteId, string requestedDrugCode, int requestedQuantity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Dictionary<string, List<DrugUnit>> SiteDetails()
+        {
+            var groupedSites = db.DrugUnits
+                    .GroupBy(x => x.DestinationSite)
+                    .ToDictionary(x => x.Key, x => x.ToList());
+
+            return groupedSites;
+        }
     }
 }

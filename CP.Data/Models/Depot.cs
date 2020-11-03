@@ -15,6 +15,6 @@ namespace CP.Data.Models
         public string DepotName { get; set; }
         [Display(Name = "Location")]
         public string DepotCountryCode { get; set; }
-        public List<DrugUnit> DepotDrugUnits { get; set; }
+        // public List<DrugUnit> DepotDrugUnits { get; set; }
     }
 }

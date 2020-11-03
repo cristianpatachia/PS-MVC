@@ -169,6 +169,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DrugUnitsController.cs" />
     <Compile Include="Controllers\SitesController.cs" />
     <Compile Include="Controllers\DepotsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -225,6 +226,10 @@
     <Content Include="Views\Sites\Edit.cshtml" />
     <Content Include="Views\Sites\Index.cshtml" />
     <Content Include="Views\Sites\NotFound.cshtml" />
+    <Content Include="Views\DrugUnits\Index.cshtml" />
+    <Content Include="Views\DrugUnits\Group.cshtml" />
+    <Content Include="Views\Sites\Group.cshtml" />
+    <Content Include="Views\Sites\RequestDrugs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Api\" />

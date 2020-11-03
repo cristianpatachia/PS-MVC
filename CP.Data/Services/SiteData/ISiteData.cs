@@ -13,5 +13,8 @@ namespace CP.Data.Services.SiteData
         void AddSite(Site site);
         void UpdateSite(Site site);
         void DeleteSite(int id);
+        IEnumerable<DrugUnit> GetRequestedDrugUnits(string siteId, string drugCode, int quantity);
+        void UpdateSiteInventory(int destinationSiteId, string requestedDrugCode, int requestedQuantity);
+        Dictionary<string, List<DrugUnit>> SiteDetails();
     }
 }

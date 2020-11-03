@@ -7,6 +7,7 @@
 <h2>Site List</h2>
 
 <p>
+    @Html.ActionLink("Inventory Details", "Group") |
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
@@ -19,6 +20,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.SiteId)
+        </th>
+        <th>
+            Request Drugs
         </th>
         <th></th>
     </tr>
@@ -34,6 +38,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.SiteId)
         </td>
+        <td>
+            @Html.ActionLink("Request Drugs", "RequestDrugs", new { id = item.SiteId })
+        </td>
+
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.SiteId }) |
             @Html.ActionLink("Details", "Details", new { id = item.SiteId }) |

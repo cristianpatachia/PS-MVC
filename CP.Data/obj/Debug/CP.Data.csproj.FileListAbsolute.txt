@@ -14,3 +14,7 @@ C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.Init.resource
 C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.csproj.GenerateResource.cache
 C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.SitesUpdate.resources
 C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.DrugUnitUpdate.resources
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.DrugUnitUpdate2.resources
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.PickNumberNullable.resources
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.RmDrugListFromSiteAndDepot.resources
+C:\Users\cpatachia\Desktop\CP\CP.Data\obj\Debug\CP.Data.Migrations.DrugUnitDepotAndSiteToString.resources
