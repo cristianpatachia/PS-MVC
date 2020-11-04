@@ -71,7 +71,7 @@ namespace CP.Data.Services.DepotData
 
         public Dictionary<string, List<DepotWeightViewModel>> DepotWeight()
         {
-            const decimal CONVERSION_KG_TO_LBS = 2.2m;
+            const decimal KG_TO_LBS_RATIO = 2.2m;
             var depotQuery = db.DrugUnits.Join(db.DrugTypes,
                                  unit => unit.AssignedTypeName,
                                  type => type.DrugTypeName,
@@ -80,7 +80,7 @@ namespace CP.Data.Services.DepotData
                                      Depot = unit.DrugUnitDepot,
                                      UnitType = unit.AssignedTypeName,
                                      UnitName = unit.DrugUnitName,
-                                     Weight = type.DrugTypeWeight * CONVERSION_KG_TO_LBS
+                                     Weight = type.DrugTypeWeight *  KG_TO_LBS_RATIO
                                  });
 
             var depotDrugWeight = depotQuery.GroupBy(x => x.Depot)
