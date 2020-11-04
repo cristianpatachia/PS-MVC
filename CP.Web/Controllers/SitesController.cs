@@ -75,6 +75,7 @@ namespace CP.Web.Controllers
             if (ModelState.IsValid)
             {
                 db.UpdateSite(site);
+                TempData["Message"] = $"{site.SiteName} [ID={site.SiteId}] has been updated.";
                 return RedirectToAction("Details", new { id = site.SiteId });
             }
             return View(site);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,19 @@ namespace CP.Data.Services.DrugUnitData
         public IEnumerable<DrugUnit> GetDrugUnits()
         {
             return db.DrugUnits.OrderBy(x => x.DrugUnitId);
+        }
+
+        public DrugUnit GetDrugUnit(int id)
+        {
+            return db.DrugUnits.FirstOrDefault(x => x.DrugUnitId == id);
+        }
+
+        public void UpdateDrugUnit(DrugUnit drugUnit)
+        {
+            var entry = db.Entry(drugUnit);
+            entry.State = EntityState.Modified;
+            db.SaveChanges();
+         
         }
 
         public void AssociateDrugUnits(string depotId, int startPickNumber, int endPickNumber)

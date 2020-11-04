@@ -10,6 +10,8 @@ namespace CP.Data.Services.DrugUnitData
     public interface IDrugUnitData
     {
         IEnumerable<DrugUnit> GetDrugUnits();
+        DrugUnit GetDrugUnit(int id);
+        void UpdateDrugUnit(DrugUnit drugUnit);
         Dictionary<string, List<DrugUnit>> GroupedDrugUnits();
         void AssociateDrugUnits(string depotId, int startPickNumber, int endPickNumber);
         void Disassociate(int startPickNumber, int endPickNumber);

@@ -13,5 +13,6 @@ namespace CP.Data.Services.DepotData
         void AddDepot(Depot depot);
         void UpdateDepot(Depot depot);
         void DeleteDepot(int id);
+        Dictionary<string, List<DrugUnit>> DepotInventory();
     }
 }

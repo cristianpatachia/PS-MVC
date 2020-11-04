@@ -1,0 +1,58 @@
+﻿@model CP.Data.Models.DrugUnit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DrugUnit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DrugUnitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrugUnitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PickNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PickNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignedTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrugUnitDepot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrugUnitDepot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DestinationSite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DestinationSite)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Set Depot", "SetDepot", new { id = Model.DrugUnitId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

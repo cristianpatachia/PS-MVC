@@ -53,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.DestinationSite)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.DrugUnitId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.DrugUnitId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.DrugUnitId })
+            @Html.ActionLink("Set Depot", "SetDepot", new { id = item.DrugUnitId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.DrugUnitId }) 
+            @*@Html.ActionLink("Delete", "Delete", new { id = item.DrugUnitId })*@
         </td>
     </tr>
 }

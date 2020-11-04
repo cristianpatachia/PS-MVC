@@ -57,6 +57,13 @@ namespace CP.Data.Services.DepotData
             db.SaveChanges();
         }
 
-        
+        public Dictionary<string, List<DrugUnit>> DepotInventory()
+        {
+            var depotInventory = db.DrugUnits
+                    .GroupBy(x => x.DrugUnitDepot)
+                    .ToDictionary(x => x.Key, x => x.ToList());
+
+            return depotInventory;
+        }
     }
 }

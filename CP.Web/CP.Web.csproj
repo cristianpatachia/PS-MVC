@@ -230,6 +230,10 @@
     <Content Include="Views\DrugUnits\Group.cshtml" />
     <Content Include="Views\Sites\Group.cshtml" />
     <Content Include="Views\Sites\RequestDrugs.cshtml" />
+    <Content Include="Views\DrugUnits\SetDepot.cshtml" />
+    <Content Include="Views\DrugUnits\Details.cshtml" />
+    <Content Include="Views\Depots\_Inventory.cshtml" />
+    <Content Include="Views\Depots\Inventory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Api\" />

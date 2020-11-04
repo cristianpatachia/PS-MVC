@@ -97,5 +97,12 @@ namespace CP.Web.Controllers
             db.DeleteDepot(id);
             return RedirectToAction("Index");
         }
+        
+        // Inventory 
+        public ActionResult Inventory()
+        {
+            var model = db.DepotInventory();
+            return View(model);
+        }
     }
 }
