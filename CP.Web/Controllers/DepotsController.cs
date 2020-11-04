@@ -1,5 +1,7 @@
 ﻿using CP.Data.Models;
 using CP.Data.Services.DepotData;
+using CP.Data.Services.DrugUnitData;
+using CP.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -101,7 +103,7 @@ namespace CP.Web.Controllers
         // Inventory 
         public ActionResult Inventory()
         {
-            var model = db.DepotInventory();
+            var model = db.DepotWeight();
             return View(model);
         }
     }

@@ -1,5 +1,6 @@
-﻿@using CP.Data.Models
-@model Dictionary<string, List<DrugUnit>>
+﻿@using CP.Web.Models
+@model Dictionary<string, List<DepotWeightViewModel>>
+@*@model List<DepotWeightViewModel>*@
 
 @{
     ViewBag.Title = "Inventory";
@@ -16,7 +17,7 @@
             Depot
         </th>
         <th>
-            Inventory Details (DrugType, DrugName, Site, PickNumber)
+            Inventory Details (DrugType, DrugName, UnitWeight)
         </th>
         <th></th>
     </tr>
@@ -31,10 +32,9 @@
                 @foreach (var val in item.Value)
                 {
                     <div>
-                        Type:        @val.AssignedTypeName,
-                        Name:        @val.DrugUnitName,
-                        Shipment to: @val.DestinationSite,
-                        PickNumber:  @val.PickNumber 
+                        Type:       @val.UnitType,
+                        Name:       @val.UnitName,
+                        Weight (kgs):     @val.Weight
                     </div>
                 }
             </td>

@@ -1,4 +1,5 @@
 ﻿using CP.Data.Models;
+using CP.Web.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,6 @@ namespace CP.Data.Services.DepotData
         void UpdateDepot(Depot depot);
         void DeleteDepot(int id);
         Dictionary<string, List<DrugUnit>> DepotInventory();
+        Dictionary<string, List<DepotWeightViewModel>> DepotWeight();
     }
 }

@@ -88,6 +88,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AppDbContext.cs" />
     <Compile Include="Services\DepotData\DepotData.cs" />
+    <Compile Include="Services\DepotData\DepotWeightViewModel.cs" />
     <Compile Include="Services\DepotData\IDepotData.cs" />
     <Compile Include="Services\DrugUnitData\DrugUnitData.cs" />
     <Compile Include="Services\DrugUnitData\IDrugUnitData.cs" />

@@ -1,19 +1,22 @@
 ﻿using CP.Data.Models;
+using CP.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+
 
 namespace CP.Data.Services.DepotData
 {
     public class DepotData : IDepotData
     {
         private readonly AppDbContext db;
-                
+
         public DepotData(AppDbContext db)
         {
             this.db = db;
         }
+        
 
         // GetAll
         public IEnumerable<Depot> GetDepots()
@@ -64,6 +67,27 @@ namespace CP.Data.Services.DepotData
                     .ToDictionary(x => x.Key, x => x.ToList());
 
             return depotInventory;
+        }
+
+        public Dictionary<string, List<DepotWeightViewModel>> DepotWeight()
+        {
+            const decimal CONVERSION_KG_TO_LBS = 2.2m;
+            var depotQuery = db.DrugUnits.Join(db.DrugTypes,
+                                 unit => unit.AssignedTypeName,
+                                 type => type.DrugTypeName,
+                                 (unit, type) => new DepotWeightViewModel
+                                 {
+                                     Depot = unit.DrugUnitDepot,
+                                     UnitType = unit.AssignedTypeName,
+                                     UnitName = unit.DrugUnitName,
+                                     Weight = type.DrugTypeWeight * CONVERSION_KG_TO_LBS
+                                 });
+
+            var depotDrugWeight = depotQuery.GroupBy(x => x.Depot)
+                                  .ToDictionary(x => x.Key, x => x.ToList());
+
+            return depotDrugWeight;
+            
         }
     }
 }
